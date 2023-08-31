@@ -1,0 +1,41 @@
+{
+  "name": "@dqljs/string-builder",
+  "version": "0.2.4",
+  "description": "DQL - string builder",
+  "author": "Zoltan Farkas <progfarkas@gmail.com>",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "publish-lib": "npm run build && npm publish",
+    "publish-beta": "npm run build && npm publish --tag beta",
+    "publish-dryrun": "npm run build && npm publish --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fzoli/dql-ts.git",
+    "directory": "packages/string-builder"
+  },
+  "keywords": [
+    "typescript",
+    "dql"
+  ],
+  "bugs": {
+    "url": "https://github.com/fzoli/dql-ts/issues"
+  },
+  "homepage": "https://github.com/fzoli/dql-ts#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "immutable": "^4.3.4"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

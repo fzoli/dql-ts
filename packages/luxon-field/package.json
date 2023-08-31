@@ -1,0 +1,44 @@
+{
+  "name": "@dqljs/luxon-field",
+  "version": "0.2.4",
+  "description": "DQL - luxon field",
+  "author": "Zoltan Farkas <progfarkas@gmail.com>",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "publish-lib": "npm run build && npm publish",
+    "publish-beta": "npm run build && npm publish --tag beta",
+    "publish-dryrun": "npm run build && npm publish --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fzoli/dql-ts.git",
+    "directory": "packages/luxon-field"
+  },
+  "keywords": [
+    "typescript",
+    "dql"
+  ],
+  "bugs": {
+    "url": "https://github.com/fzoli/dql-ts/issues"
+  },
+  "homepage": "https://github.com/fzoli/dql-ts#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@dqljs/field": "^0.2.4",
+    "immutable": "^4.3.4",
+    "luxon": "^3.4.2"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.3.2",
+    "typescript": "^4.9.5"
+  }
+}

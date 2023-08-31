@@ -1,0 +1,33 @@
+{
+  "name": "sample",
+  "version": "0.1.0",
+  "description": "DQL - sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec --compilers ts:ts-node/register 'src/**/*.test.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fzoli/dql-ts.git",
+    "directory": "sample"
+  },
+  "author": "Zoltan Farkas <progfarkas@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@dqljs/field": "^0.2.4",
+    "@dqljs/query": "^0.2.4",
+    "@dqljs/luxon-field": "^0.2.4",
+    "@dqljs/luxon-query": "^0.2.4",
+    "immutable": "^4.3.4",
+    "luxon": "^3.4.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/luxon": "^3.0.1",
+    "@types/mocha": "^10.0.0",
+    "chai": "^4.3.3",
+    "mocha": "^10.0.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
