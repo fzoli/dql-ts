@@ -18,9 +18,9 @@ describe('DQL library', () => {
 
     it('filter demonstration' , () => {
         const f = new UserFilterField()
-        const c = f.creationTime.before(DateTime.fromISO("2020-01-01T00:00:00.000Z")).not().and(f.type.eq(UserType.ADMIN).or(f.name.containsIgnoreCase("a")))
+        const c = f.creationTime.before(DateTime.fromISO("2020-01-01T00:00:00.000Z")).not().and(f.type.eq(UserType.ADMIN).or(f.name.containsIgnoreCase("a"))).and(f.enabled).and(f.heightCm.goe(160).and(f.heightCm.lt(120.5)))
         const dql = Criteria.toDqlString(c)
-        expect(dql).to.equal(`!creationTime:before:"2020-01-01T00:00:00.000Z"&(type:eq:"ADMIN"|name:containsIgnoreCase:"a")`)
+        expect(dql).to.equal(`!creationTime:before:"2020-01-01T00:00:00.000Z"&(type:eq:"ADMIN"|name:containsIgnoreCase:"a")&enabled:isTrue&(heightCm:goe:160&heightCm:lt:120.5)`)
     });
 
     it('grouping by operator precedence' , () => {
