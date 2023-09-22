@@ -17,6 +17,7 @@
 export * from './uuid'
 export * from './criteria'
 export * from './criterias'
+export * from './criteria-builder'
 export * from './filter-function'
 export * from './field'
 export * from './boolean-field'
